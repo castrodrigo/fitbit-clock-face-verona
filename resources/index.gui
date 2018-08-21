@@ -1,0 +1,11 @@
+<svg class="screen">
+  <svg class="container">
+    <text id="hoursText" />
+    <text id="minutesText" />
+    <text id="secondsText" />
+    <text id="weekDayText" />
+    <text id="dateDayText" />
+    <text id="batteryText" />
+    <text id="hrmText" />
+  </svg>
+</svg>

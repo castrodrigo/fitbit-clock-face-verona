@@ -1,0 +1,22 @@
+{
+  "fitbit": {
+    "appUUID": "08133d2a-99ba-4742-bdcf-572dfeff7a9d",
+    "appType": "clockface",
+    "appDisplayName": "WatchTest2",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "",
+    "requestedPermissions": [
+      "access_activity",
+      "access_heart_rate"
+    ],
+    "buildTargets": [
+      "higgs",
+      "meson"
+    ],
+    "i18n": {
+      "en": {
+        "name": "WatchTest2"
+      }
+    }
+  }
+}
