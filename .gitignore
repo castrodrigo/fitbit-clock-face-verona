@@ -1,0 +1,28 @@
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+
+# OS or Editor folders
+.vscode
+.DS_Store
+.cache
+.project
+.settings
+.tmproj
+temp.sql
+nbproject
+Thumbs.db
+
+# NPM packages folder.
+node_modules
+
+# Yarn
+yarn-error.log
