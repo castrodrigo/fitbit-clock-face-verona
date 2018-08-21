@@ -1,38 +1,38 @@
 import clock from "clock";
 import document from "document";
+import { HeartRateSensor } from "heart-rate";
 import { preferences } from "user-settings";
 import { battery } from "power";
-import { HeartRateSensor } from "heart-rate";
+import { today as userToday } from "user-activity";
 import * as util from "../common/utils";
 
 const now = new Date();
 const nowDay = util.weekDay(now.getDay());
 const nowDate = now.getDate();
 
-// Update the clock every minute
-clock.granularity = "seconds";
+const hoursText = document.getElementById("hours");
+const minutesText = document.getElementById("minutes");
+const secondsText = document.getElementById("seconds");
 
-// Get a handle on the <text> element
-const hoursText = document.getElementById("hoursText");
-const minutesText = document.getElementById("minutesText");
-const secondsText = document.getElementById("secondsText");
-const weekDayText = document.getElementById("weekDayText");
-const dateDayText = document.getElementById("dateDayText");
-const batteryText = document.getElementById("batteryText");
-const hrmData = document.getElementById("hrmText");
+const weekDayText = document.getElementById("weekDay");
+const dateDayText = document.getElementById("dateDay");
+
+const batteryText = document.getElementById("battery");
+const hrmText = document.getElementById("hrm");
+const stepsText = document.getElementById("steps");
+const floorsText = document.getElementById("floors");
+const kcalText = document.getElementById("kcal");
 
 let hrm = new HeartRateSensor();
 hrm.start();
 
-// Update the <text> element every tick with the current time
-clock.ontick = (evt) => {
+clock.granularity = "seconds";
+clock.ontick = evt => {
   let today = evt.date;
   let hours = today.getHours();
   if (preferences.clockDisplay === "12h") {
-    // 12h format
     hours = hours % 12 || 12;
   } else {
-    // 24h format
     hours = util.zeroPad(hours);
   }
   let mins = util.zeroPad(today.getMinutes());
@@ -40,13 +40,13 @@ clock.ontick = (evt) => {
   hoursText.text = `${hours}`;
   minutesText.text = `${mins}`;
   secondsText.text = `${seconds}`;
-  
+
   batteryText.text = `${Math.floor(battery.chargeLevel)} %`;
-  hrmData.text = `${hrm.heartRate ? hrm.heartRate : 0} BPM`;
-}
+  hrmText.text = `${hrm.heartRate ? hrm.heartRate : 0} BPM`;
+  stepsText.text = `${userToday.local.steps || 0} STP`;
+  floorsText.text = `${userToday.local.elevationGain || 0} FLS`;
+  kcalText.text = `${userToday.local.calories || 0} CAL`;
+};
 
 weekDayText.text = `${nowDay}`;
 dateDayText.text = `${nowDate}`;
-
-
-

@@ -9,18 +9,18 @@ export function zeroPad(i) {
 export function weekDay(index) {
   switch (index) {
     case 0:
-      return 'SU';
+      return "SU";
     case 1:
-      return 'MO';
+      return "MO";
     case 2:
-      return 'TU';
+      return "TU";
     case 3:
-      return 'WE';
+      return "WE";
     case 4:
-      return 'TH';
+      return "TH";
     case 5:
-      return 'FR';
+      return "FR";
     case 6:
-      return 'SA';
+      return "SA";
   }
 }
