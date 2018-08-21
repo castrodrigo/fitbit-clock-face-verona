@@ -18,5 +18,8 @@
         "name": "WatchTest2"
       }
     }
+  },
+  "dependencies": {
+    "eslint": "^5.4.0"
   }
 }
