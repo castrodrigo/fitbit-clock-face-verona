@@ -15,9 +15,15 @@ text {
   y: 2%;
 }
 
+.label {
+  font-size: 20;
+  text-length: 10;
+  text-anchor: end;
+}
+
 #battery {
-  font-family: Colfax-Black;
-  x: 100%;
+  font-family: Colfax-Regular;
+  x: 94%;
   y: 20;
   font-size: 18;
   text-length: 10;
@@ -25,51 +31,87 @@ text {
 }
 
 #steps {
-  font-family: Colfax-Black;
-  x: 100%;
-  y: 66;
+  font-family: SevilleSharp-Bold;
+  x: 86%;
+  y: 76;
   font-size: 30;
   text-length: 10;
   text-anchor: end;
+  fill: #c8c8c8;
+}
+
+.stepsIcon {
+  fill: #949391;
+  width: 28;
+  height: 26;
+  x: 88%;
+  y: 54;
 }
 
 #kcal {
-  font-family: Colfax-Black;
-  x: 100%;
-  y: 116;
+  font-family: SevilleSharp-Bold;
+  x: 86%;
+  y: 126;
   font-size: 30;
   text-length: 10;
   text-anchor: end;
+  fill: #c8c8c8;
+}
+
+.kcalIcon {
+  fill: #949391;
+  width: 28;
+  height: 24;
+  x: 88%;
+  y: 104;
 }
 
 #hrm {
-  font-family: Colfax-Black;
-  x: 100%;
-  y: 166;
+  font-family: SevilleSharp-Bold;
+  x: 86%;
+  y: 176;
   font-size: 30;
   text-length: 10;
   text-anchor: end;
+  fill: #c8c8c8;
+}
+
+.hrmIcon {
+  fill: #949391;
+  width: 26;
+  height: 26;
+  x: 88%;
+  y: 152;
 }
 
 #floors {
-  font-family: Colfax-Black;
-  x: 100%;
-  y: 216;
+  font-family: SevilleSharp-Bold;
+  x: 86%;
+  y: 226;
   font-size: 30;
   text-length: 10;
   text-anchor: end;
+  fill: #c8c8c8;
+}
+
+.floorsIcon {
+  fill: #949391;
+  width: 28;
+  height: 38;
+  x: 88%;
+  y: 198;
 }
 
 #hours {
   font-family: Fabrikat-Black;
-  x: 0%;
+  x: 4%;
   y: 114;
   fill: #7b68ee;
   font-size: 150;
 }
 #minutes {
   font-family: Fabrikat-Black;
-  x: 0%;
+  x: 4%;
   y: 234;
   fill: #9370db;
   font-size: 150;
@@ -83,13 +125,13 @@ text {
 
 #weekDay {
   font-family: Fabrikat-Bold;
-  x: 0%;
+  x: 4%;
   y: 114;
-  font-size: 20;
+  font-size: 24;
 }
 #dateDay {
   font-family: Fabrikat-Bold;
-  x: 0%;
+  x: 4%;
   y: 142;
   font-size: 40;
 }

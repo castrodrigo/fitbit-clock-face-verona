@@ -42,10 +42,10 @@ clock.ontick = evt => {
   secondsText.text = `${seconds}`;
 
   batteryText.text = `${Math.floor(battery.chargeLevel)} %`;
-  hrmText.text = `${hrm.heartRate ? hrm.heartRate : 0} BPM`;
-  stepsText.text = `${userToday.local.steps || 0} STP`;
-  floorsText.text = `${userToday.local.elevationGain || 0} FLS`;
-  kcalText.text = `${userToday.local.calories || 0} CAL`;
+  hrmText.text = hrm.heartRate ? hrm.heartRate : 0;
+  stepsText.text = userToday.local.steps || 0;
+  floorsText.text = userToday.local.elevationGain || 0;
+  kcalText.text = userToday.local.calories || 0;
 };
 
 weekDayText.text = `${nowDay}`;
