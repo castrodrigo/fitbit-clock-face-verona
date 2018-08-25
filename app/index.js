@@ -1,14 +1,14 @@
 import clock from "clock";
 import { HeartRateSensor } from "heart-rate";
 
+import settingsMessageReceiver from "./connectors/settingsMessageReceiver";
+
 import { hourHandler, dateHandler } from "./components/timeHandler";
 import batteryHandler from "./components/batteryHandler";
-import hrmHandler from "./components/hrmHandler";
-import {
-  stepsHandler,
-  floorsHandler,
-  kcalHandler
-} from "./components/userActivityHandler";
+import { setHrm } from "./components/hrmHandler";
+import { setSteps, setFloors, setKcal } from "./components/userActivityHandler";
+
+settingsMessageReceiver();
 
 const hrm = new HeartRateSensor();
 hrm.start();
@@ -16,11 +16,10 @@ hrm.start();
 clock.granularity = "seconds";
 clock.ontick = evt => {
   hourHandler(evt);
+  dateHandler();
   batteryHandler();
-  hrmHandler(hrm);
-  stepsHandler();
-  floorsHandler();
-  kcalHandler();
+  setHrm(hrm);
+  setSteps();
+  setFloors();
+  setKcal();
 };
-
-dateHandler();
