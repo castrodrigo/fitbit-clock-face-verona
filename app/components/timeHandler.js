@@ -20,9 +20,23 @@ export function hourHandler(evt) {
   document.getElementById("seconds").text = `${seconds}`;
 }
 
-export function dateHandler(elements) {
+export function dateHandler(settings = null) {
   const now = new Date();
 
   document.getElementById("weekDay").text = `${weekDay(now.getDay())}`;
   document.getElementById("dateDay").text = `${now.getDate()}`;
+}
+
+export function setHoursColor(color) {
+  document.getElementById("hours").style.fill = color;
+}
+
+export function setMinutesColor(color) {
+  document.getElementById("minutes").style.fill = color;
+}
+
+export function setAdditionalColor(color) {
+  document.getElementById("seconds").style.fill = color;
+  document.getElementById("weekDay").style.fill = color;
+  document.getElementById("dateDay").style.fill = color;
 }
