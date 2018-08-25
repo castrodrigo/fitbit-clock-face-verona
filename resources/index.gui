@@ -1,14 +1,14 @@
 <svg class="screen">
-  <svg class="container">
+  <rect id="container">
     <text id="hours" />
     <text id="minutes" />
     <text id="seconds" />
     <text id="weekDay" />
     <text id="dateDay" />
     <text id="battery" />
-    <text id="steps" /><image href="icons/steps.png" class="stepsIcon" />
-    <text id="kcal" /><image href="icons/kcal.png" class="kcalIcon" />
-    <text id="hrm" /><image href="icons/heart.png" class="hrmIcon" />
-    <text id="floors" /><image href="icons/floors.png" class="floorsIcon" />
-  </svg>
+    <text id="steps" /><image href="icons/steps.png" id="stepsIcon" />
+    <text id="kcal" /><image href="icons/kcal.png" id="kcalIcon" />
+    <text id="hrm" /><image href="icons/heart.png" id="hrmIcon" />
+    <text id="floors" /><image href="icons/floors.png" id="floorsIcon" />
+  </rect>
 </svg>

@@ -6,19 +6,11 @@ text {
 .screen {
   width: 100%;
   height: 100%;
-  viewport-fill: #151515;
 }
-.container {
-  width: 96%;
-  height: 96%;
-  x: 2%;
-  y: 2%;
-}
-
-.label {
-  font-size: 20;
-  text-length: 10;
-  text-anchor: end;
+#container {
+  width: 100%;
+  height: 100%;
+  fill: #151515;
 }
 
 #battery {
@@ -40,7 +32,7 @@ text {
   fill: #c8c8c8;
 }
 
-.stepsIcon {
+#stepsIcon {
   fill: #949391;
   width: 28;
   height: 26;
@@ -58,7 +50,7 @@ text {
   fill: #c8c8c8;
 }
 
-.kcalIcon {
+#kcalIcon {
   fill: #949391;
   width: 28;
   height: 24;
@@ -76,7 +68,7 @@ text {
   fill: #c8c8c8;
 }
 
-.hrmIcon {
+#hrmIcon {
   fill: #949391;
   width: 26;
   height: 26;
@@ -94,7 +86,7 @@ text {
   fill: #c8c8c8;
 }
 
-.floorsIcon {
+#floorsIcon {
   fill: #949391;
   width: 28;
   height: 38;
